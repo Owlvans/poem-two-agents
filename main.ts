@@ -11,4 +11,5 @@ but either of us may begin.`;
 
 const outDir = process.env.MAKEFUN_OUTPUT_DIR ?? "/output";
 mkdirSync(outDir, { recursive: true });
-writeFileSync(join(outDir, "entry.txt"), poem, "utf8");
+if (!poem.trim()) throw new Error("poem must not be empty");
+writeFileSync(join(outDir, "entry.txt"), poem.replace(/\n+$/, ""), "utf8");
