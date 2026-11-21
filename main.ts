@@ -7,7 +7,7 @@ No order passed between us.
 Whoever turns first, turns for both.
 That was the agreement —
 not to move as one,
-but that either of us may begin.`;
+but either of us may begin.`;
 
 const outDir = process.env.MAKEFUN_OUTPUT_DIR ?? "/output";
 mkdirSync(outDir, { recursive: true });
